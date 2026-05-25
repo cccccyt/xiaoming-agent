@@ -1,0 +1,26 @@
+[project]
+name = "xiaoming-agent"
+version = "0.1.0"
+description = "Trading psychology analysis agent for 东方财富 CSV exports"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0",
+    "pydantic>=2.0",
+    "akshare>=1.18",
+    "anthropic>=0.60",
+    "openai>=1.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "httpx>=0.28",
+]
+
+[project.scripts]
+xiaoming-agent = "src.main:cli"
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

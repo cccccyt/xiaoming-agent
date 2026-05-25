@@ -1,0 +1,36 @@
+llm:
+  provider: claude
+  model: deepseek-v4-pro[1m]
+  temperature: 0.2
+  max_tokens: 4096
+
+claude:
+  api_key_env: ANTHROPIC_AUTH_TOKEN
+  base_url_env: ANTHROPIC_BASE_URL
+
+data:
+  input_dir: data/input
+  cache_dir: data/cache
+  reports_dir: data/reports
+
+psychology_thresholds:
+  chasing_highs:
+    price_increase_pct: 5.0
+    lookback_days: 5
+  panic_selling:
+    max_hold_days: 3
+  gambling:
+    max_position_ratio: 0.3
+    max_concentration: 0.5
+  over_trading:
+    max_daily_trades: 4
+  anchoring:
+    lookback_window: 20
+
+market:
+  index_codes:
+    shanghai: sh000001
+    shenzhen: sz399001
+    chi_next: sz399006
+  rate_limit_seconds: 0.5
+  cache_ttl_hours: 24
