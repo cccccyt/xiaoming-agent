@@ -97,8 +97,8 @@ def build_monthly_analysis(
     index_fetcher = IndexFetcher(cache, rate_limit)
     board_fetcher = BoardFetcher(cache, rate_limit)
     news_fetcher = NewsFetcher(cache, rate_limit)
-    sentiment = MarketSentimentAnalyzer(index_fetcher, board_fetcher, news_fetcher)
-    analysis.market_context = sentiment.build_market_context(trades, month, config)
+    sentiment = MarketSentimentAnalyzer(index_fetcher, board_fetcher, news_fetcher, stock_fetcher)
+    analysis.market_context = sentiment.build_market_context(trades, month)
 
     return analysis
 

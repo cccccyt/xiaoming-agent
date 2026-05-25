@@ -66,7 +66,7 @@ PROGRESS_PROMPT = """以下是一位交易者最近数月的历史分析结果�
 
 返回以下JSON格式：
 ```json
-{
+{{
   "overall_assessment": "string, 总体评估",
   "improved_areas": ["已改善的方面"],
   "persistent_issues": ["持续存在的问题"],
@@ -74,7 +74,7 @@ PROGRESS_PROMPT = """以下是一位交易者最近数月的历史分析结果�
   "improvement_speed": "string, 改进速度评估（快/中/慢）",
   "trend_analysis": "string, 趋势分析",
   "next_phase_recommendations": ["下阶段建议"]
-}
+}}
 ```"""
 
 TRADE_SUMMARY_TEMPLATE = """共 {count} 笔交易（{buy_count} 笔买入 / {sell_count} 笔卖出）

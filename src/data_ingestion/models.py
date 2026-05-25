@@ -88,6 +88,8 @@ class MarketContext(BaseModel):
     volatility_regime: str = "未知"
     market_sentiment_label: str = "未知"
     relevant_news: list[dict] = []
+    stock_trends: dict[str, dict] = {}  # stock_code -> {name, start_price, end_price, change_pct, highest, lowest}
+    hot_news: list[dict] = []  # 市场热点新闻
 
 
 class LLMAnalysisResult(BaseModel):
